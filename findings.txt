@@ -1,0 +1,19 @@
+The difficulty of the three mystery Sudoku boards were identified by
+counting the number of recursive calls made by the solve_board function:
+
+Hard difficulty: Mystery 3 board – 14,134 recursions
+Extremely hard difficulty: Mystery 1 board – 421,547 recursions
+Impossible: Mystery 2 board – no solution exists
+
+Generally, easier puzzles, with more initial clues, require fewer recursive
+calls due to less backtracking. Harder puzzles have fewer initial clues so
+require more recursive attempts and backtracking. In unsolvable puzzles,
+the algorithm exhausts all possibilities. However, using recursion count as
+a measure of difficulty may not be reliable when the Sudoku boards being
+compared are more similar in difficulty than the ones used here.
+Recursion count reflects the process of the algorithm, which attempts to
+solve the puzzle by trying every possible number at each empty position
+(until a solution is found), progressing through the grid systematically.
+This brute-force approach is very different to how a human would logically
+approach a Sudoku puzzle. Therefore, recursion count cannot reflect the
+true difficulty of a puzzle, although it can offer an estimate.
